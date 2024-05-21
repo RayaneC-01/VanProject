@@ -14,23 +14,24 @@ h1 {
   text-align: center;
 }
 
-.vans {
+.vehicles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.van {
+.vehicle {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
 }
 
-.van img {
-  width: 100%;
+.vehicle img {
+  width: 90%;
   border-radius: 8px;
   margin-bottom: 10px;
+  border: 2px solid black;
 }
 
 .btn {
