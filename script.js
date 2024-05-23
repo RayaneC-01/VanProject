@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: 'Nissan Navara',
             description: 'Description du Nissan Navara.',
             image: 'https://images.caradisiac.com/logos-ref/modele/modele--nissan-navara-3/S7-modele--nissan-navara-3.jpg',
-            link: 'https://www.nissan.co.uk/vehicles/new-vehicles/np300-navara.html'
+            link: 'https://www.caradisiac.com/modele--nissan-navara-3/'
         },
         {
             name: 'Volkswagen Amarok',
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: 'Chevrolet Colorado',
             description: 'Description du Chevrolet Colorado.',
             image: 'https://img.sm360.ca/images/article/groupe-dallaire/106587//2023-colorado-gal-ext-011667230712658.jpg',
-            link: 'https://www.chevrolet.com/trucks/colorado-small-truck'
+            link: 'https://www.chevrolet.com/trucks/colorado'
         },
         {
             name: 'Ford F-150',
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: 'Mitsubishi L200',
             description: 'Description du Mitsubishi L200.',
             image: 'https://sf2.autoplus.fr/wp-content/uploads/autoplus/2022/12/1-89.jpg',
-            link: 'Lien de la page pour le Mitsubishi L200'
+            link: 'https://www.dna.fr/magazine-automobile/2023/10/16/pick-up-le-nouveau-mitsubishi-l200-deja-distingue'
         },
         {
             name: 'Hymer Exsis-i 474', description: 'Description du Hymer Exsis-i 474.', image: 'https://www.campingcarlesite.com/wp-content/uploads/2022/05/2022-Integral-Hymer-Exsis-i-474-07.jpg', link: 'https://www.campingcarlesite.com/essai-camping-car/54177-hymer-exsis-i-474-les-atouts-dun-integral-dans-un-petit-format-664-m'
