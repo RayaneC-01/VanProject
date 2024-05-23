@@ -1,5 +1,3 @@
-/* jshint esversion: 6 */
-
 document.addEventListener('DOMContentLoaded', function () {
     const vehicleContainer = document.getElementById('vehicleContainer');
 
@@ -20,18 +18,17 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Ford F-150', description: 'Description du Ford F-150.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMoCeaM4_fm4LSMptwstILyMdGkNxGULJYXXlcxmHN8A&s' },
         { name: 'Jeep Gladiator', description: 'Description du Jeep Gladiator.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0J2BSUw1--u3WYTFvnFoTeBBBBn5RYzT36_puMv1bnA&s' },
         { name: 'Honda Ridgeline', description: 'Description du Honda Ridgeline.', image: 'https://hips.hearstapps.com/hmg-prod/images/2024-honda-ridgeline-trailsport-117-660c4ee75bd07.jpg?crop=0.901xw:0.674xh;0.0537xw,0.243xh&resize=1200:*' },
-        { name: 'Hymer Exsis-i 474', description: 'Description du Hymer Exsis-i 474.', image: 'https://www.campingcarlesite.com/wp-content/uploads/2022/05/2022-Integral-Hymer-Exsis-i-474-07.jpg', link: 'https://www.vanlifemag.fr/presentationessais/ford-transit/66425' },
-        { name: 'Ford Transit 2T', description: 'Description du Ford Transit 2T.', image: 'https://www.vanlifemag.fr/wp-content/uploads/2022/06/dethleffs-590c-001-e1675940818135-768x432.jpg' },
-        { name: 'Ford Transit Custom Nugget', description: 'Description du Ford Transit Custom Nugget.', image: 'https://live.dealer-asset.co/images/fr4/product/file/TransitCustomNugget-638489450688005219.jpg?s=2000' },
-        { name: 'Mercedes Sprinter', description: 'Description du Mercedes Sprinter.', image: 'https://images.squarespace-cdn.com/content/v1/57ef0117579fb34c2451c73b/1610141260192-BV2N87XMRPF2QEFH5EMY/Copy+of+Toops_Sprinter+144-26.jpg?format=1500w' },
+        { name: 'Hymer Exsis-i 474', description: 'Description du Hymer Exsis-i 474.', image: 'https://www.campingcarlesite.com/wp-content/uploads/2022/05/2022-Integral-Hymer-Exsis-i-474-07.jpg', link: 'https://www.campingcarlesite.com/essai-camping-car/54177-hymer-exsis-i-474-les-atouts-dun-integral-dans-un-petit-format-664-m' },
+        { name: 'Ford Transit 2T', description: 'Description du Ford Transit 2T.', image: 'https://www.vanlifemag.fr/wp-content/uploads/2022/06/dethleffs-590c-001-e1675940818135-768x432.jpg', link: 'https://www.vanlifemag.fr/presentationessais/ford-transit/66425' },
+        { name: 'Ford Transit Custom Nugget', description: 'Description du Ford Transit Custom Nugget.', image: 'https://live.dealer-asset.co/images/fr4/product/file/TransitCustomNugget-638489450688005219.jpg?s=2000', link: 'https://www.motor1.com/news/683268/2024-ford-transit-custom-nugget/' },
+        { name: 'Mercedes Sprinter', description: 'Description du Mercedes Sprinter.', image: 'https://images.squarespace-cdn.com/content/v1/57ef0117579fb34c2451c73b/1610141260192-BV2N87XMRPF2QEFH5EMY/Copy+of+Toops_Sprinter+144-26.jpg?format=1500w', link: 'https://vanlifecustoms.com/chads144sprinter' },
+        { name: 'Volkswagen Transporter', description: 'Description du Volkswagen Transporter.', image: 'https://www.ecowagon.co.uk/wp-content/uploads/2020/04/Custom-VW-T6-Specialists-UK.jpg', link: 'https://www.ecowagon.co.uk/custom-van-options/' },
+        { name: 'Fiat Ducato', description: 'Description du Fiat Ducato.', image: 'https://www.fiatcamper.com/content/dam/camper/cross/product/fiat-ducato-camper-van/modular-dimensions/cover-2.jpg', link: 'https://www.fiatcamper.com/fr/produit/Fiat-ducato-camper-van' },
+        { name: 'Renault Master', description: 'Description du Renault Master.', image: 'https://www.vanlifemag.fr/wp-content/uploads/2023/07/font-vendome-leader-camp-elegance1.jpg', link: 'https://www.vanlifemag.fr/presentationessais/font-vendome-nos-photos-exclusives-des-nouveaux-camper-vans-elegance/69261' },
+        { name: 'Peugeot Boxer', description: 'Description du Peugeot Boxer.', image: 'https://www.transitcenter.fr/graphics/new_brands/Boxerglowne.jpg', link: 'https://www.transitcenter.fr/peugeot-boxer.php' }
     ];
 
-    // affiche dans la fenetre
-    // newVehicles.forEach(vehicle => {
-    //     console.log(vehicle.image);
-    // });
-
-    // Pour chaque nouvelle voiture, créez une carte et ajoute  au conteneur
+    // Pour chaque nouvelle voiture, créez une carte et ajoutez-la au conteneur
     newVehicles.forEach(vehicle => {
         const card = `
             <div class="col-lg-4 mb-4">
@@ -40,12 +37,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="card-body">
                         <h5 class="card-title">${vehicle.name}</h5>
                         <p class="card-text">${vehicle.description}</p>
-                        <button class="btn btn-primary">En savoir plus</button>
+                        <button class="btn btn-primary" data-link="${vehicle.link}">En savoir plus</button>
                     </div>
                 </div>
             </div>
         `;
-        vehicleContainer.innerHTML += card;
+        document.getElementById('vehicles').innerHTML += card;
     });
 
     // Ajoutez un gestionnaire d'événements aux nouveaux boutons après avoir ajouté les nouvelles cartes
@@ -53,13 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.target && e.target.classList.contains('btn')) {
             let vehicleName = e.target.parentNode.querySelector('.card-title').innerText;
             let vehicleDescription = e.target.parentNode.querySelector('.card-text').innerText;
-            let alertText = "https://www.vanlifemag.fr/presentationessais/ford-transit/66425";
+            let vehicleLink = e.target.getAttribute('data-link');
+
             Swal.fire({
                 title: vehicleName,
-                text: vehicleDescription,
-                text: alertText,
+                html: `${vehicleDescription} <br> <a href="${vehicleLink}" target="_blank">En savoir plus</a>`,
                 icon: 'info',
-
                 confirmButtonText: 'OK'
             });
         }
