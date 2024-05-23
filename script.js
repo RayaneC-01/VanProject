@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const vehicleContainer = document.getElementById('vehicleContainer');
+    const vehicleContainer = document.getElementById('vehicles'); // Correction ici
 
     if (!vehicleContainer) {
-        console.error('Element with ID "vehicleContainer" not found');
+        console.error('Element with ID "vehicles" not found'); // Correction ici
         return;
     }
 
@@ -30,19 +30,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Pour chaque nouvelle voiture, créez une carte et ajoutez-la au conteneur
     newVehicles.forEach(vehicle => {
-        const card = `
-            <div class="col-lg-4 mb-4">
-                <div class="card">
-                    <img src="${vehicle.image}" class="card-img-top" alt="${vehicle.name}">
-                    <div class="card-body">
-                        <h5 class="card-title">${vehicle.name}</h5>
-                        <p class="card-text">${vehicle.description}</p>
-                        <button class="btn btn-primary" data-link="${vehicle.link}">En savoir plus</button>
-                    </div>
+        const card = document.createElement('div');
+        card.classList.add('col-lg-4', 'mb-4');
+        card.innerHTML = `
+            <div class="card">
+                <img src="${vehicle.image}" class="card-img-top" alt="${vehicle.name}">
+                <div class="card-body">
+                    <h5 class="card-title">${vehicle.name}</h5>
+                    <p class="card-text">${vehicle.description}</p>
+                    <button class="btn btn-primary" data-link="${vehicle.link || '#'}">En savoir plus</button>
                 </div>
             </div>
         `;
-        document.getElementById('vehicles').innerHTML += card;
+        vehicleContainer.appendChild(card);
     });
 
     // Ajoutez un gestionnaire d'événements aux nouveaux boutons après avoir ajouté les nouvelles cartes
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             Swal.fire({
                 title: vehicleName,
-                html: `${vehicleDescription} <br> <a href="${vehicleLink}" target="_blank">En savoir plus</a>`,
+                html: `${vehicleDescription}<br><a href="${vehicleLink}" target="_blank">En savoir plus</a>`,
                 icon: 'info',
                 confirmButtonText: 'OK'
             });
