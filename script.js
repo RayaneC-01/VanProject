@@ -103,7 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     ];
 
-    // Pour chaque nouvelle voiture, créez une carte et ajoutez-la au conteneur
+    // Pour chaque nouvelle voiture, créez une carte et ajoute  au conteneur
+    // Début de la boucle forEach qui itère sur chaque objet véhicule dans le tableau newVehicles
     newVehicles.forEach(vehicle => {
         const card = `
             <div class="col-lg-4 mb-4">
@@ -117,24 +118,38 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
         `;
+        // Insère la carte nouvellement créée dans le conteneur "vehicles" dans le DOM
         document.getElementById('vehicles').insertAdjacentHTML('beforeend', card);
-    });
+        // Utilise insertAdjacentHTML pour insérer la carte HTML à la fin du contenu existant du conteneur "vehicles"
+
+    }); // Fin de la boucle forEach
 
     // Ajoutez un gestionnaire d'événements aux nouveaux boutons après avoir ajouté les nouvelles cartes
     vehicleContainer.addEventListener('click', function (e) {
+        // Début de l'écouteur d'événements 'click' sur le conteneur de véhicules
+
         if (e.target && e.target.classList.contains('btn')) {
+            // Vérifie si l'élément cliqué est un bouton
+
+            // Récupère le nom du véhicule à partir du titre de la carte parente de ce bouton
             let vehicleName = e.target.parentNode.querySelector('.card-title').innerText;
+
+            // Récupère la description du véhicule à partir du texte de la carte parente de ce bouton
             let vehicleDescription = e.target.parentNode.querySelector('.card-text').innerText;
+
+            // Récupère le lien du véhicule à partir de l'attribut data-link du bouton
             let vehicleLink = e.target.getAttribute('data-link');
 
+            // Affiche une boîte de dialogue modale avec le nom, la description et un lien pour en savoir plus sur le véhicule
             Swal.fire({
-                title: vehicleName,
-                text: vehicleDescription,
-                html: `${vehicleDescription}<br><a href="${vehicleLink}" target="_blank">En savoir plus</a>`,
+                title: vehicleName, // Titre de la boîte de dialogue avec le nom du véhicule
+                text: vehicleDescription, // Texte de la boîte de dialogue avec la description du véhicule
+                html: `${vehicleDescription}<br><a href="${vehicleLink}" target="_blank">En savoir plus</a>`, // Contenu HTML de la boîte de dialogue avec la description et le lien du véhicule
 
-                icon: 'info',
-                confirmButtonText: 'OK',
+                icon: 'info', // Icône de la boîte de dialogue (info)
+                confirmButtonText: 'OK', // Texte du bouton de confirmation
             });
         }
     });
+
 });
