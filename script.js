@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 document.addEventListener('DOMContentLoaded', function () {
     const vehicleContainer = document.getElementById('vehicles'); // Correction ici
 
@@ -6,9 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
+
     // Les données des nouvelles voitures
     const newVehicles = [
-        { name: 'Ford Ranger', description: 'Description du Ford Ranger.', image: 'https://www.ford.fr/content/dam/guxeu/rhd/central/cvs/all-new-ranger-2022/features/ford-ranger-eu-P703_EU_LHD_TREMOR-16x9-2160x1215.jpg.renditions.original.png' },
+        { name: 'Ford Ranger', description: 'Description du Ford Ranger.', image: 'https://www.ford.fr/content/dam/guxeu/rhd/central/cvs/all-new-ranger-2022/features/ford-ranger-eu-P703_EU_LHD_TREMOR-16x9-2160x1215.jpg.renditions.original.png', link: 'https://www.ford.fr/utilitaires-et-pick-up/nouveau-ranger' },
+
         { name: 'Toyota Hilux', description: 'Description du Toyota Hilux.', image: 'https://scene7.toyota.eu/is/image/toyotaeurope/toyota-hilux-2020-gallery-03-full_tcm-18-2017452?wid=1280&fit=fit,1&ts=0&resMode=sharp2&op_usm=1.75,0.3,2,0' },
         { name: 'Nissan Navara', description: 'Description du Nissan Navara.', image: 'https://images.caradisiac.com/logos-ref/modele/modele--nissan-navara-3/S7-modele--nissan-navara-3.jpg' },
         { name: 'Volkswagen Amarok', description: 'Description du Volkswagen Amarok.', image: 'https://www.automobile-magazine.fr/asset/cms/840x394/6353/config/6047/ce-restylage-de-lamarok-1-ne-transfigure-pas-vraiment-la-plastique-musclee-de-ce-beau-bebe.jpg' },
@@ -25,24 +29,24 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Volkswagen Transporter', description: 'Description du Volkswagen Transporter.', image: 'https://www.ecowagon.co.uk/wp-content/uploads/2020/04/Custom-VW-T6-Specialists-UK.jpg', link: 'https://www.ecowagon.co.uk/custom-van-options/' },
         { name: 'Fiat Ducato', description: 'Description du Fiat Ducato.', image: 'https://www.fiatcamper.com/content/dam/camper/cross/product/fiat-ducato-camper-van/modular-dimensions/cover-2.jpg', link: 'https://www.fiatcamper.com/fr/produit/Fiat-ducato-camper-van' },
         { name: 'Renault Master', description: 'Description du Renault Master.', image: 'https://www.vanlifemag.fr/wp-content/uploads/2023/07/font-vendome-leader-camp-elegance1.jpg', link: 'https://www.vanlifemag.fr/presentationessais/font-vendome-nos-photos-exclusives-des-nouveaux-camper-vans-elegance/69261' },
-        { name: 'Peugeot Boxer', description: 'Description du Peugeot Boxer.', image: 'https://www.transitcenter.fr/graphics/new_brands/Boxerglowne.jpg', link: 'https://www.transitcenter.fr/peugeot-boxer.php' }
+        { name: 'Peugeot Boxer', description: 'Description du Peugeot Boxer.', image: 'https://www.transitcenter.fr/graphics/new_brands/Boxerglowne.jpg', link: 'https://www.transitcenter.fr/peugeot-boxer.php' },
     ];
 
     // Pour chaque nouvelle voiture, créez une carte et ajoutez-la au conteneur
     newVehicles.forEach(vehicle => {
-        const card = document.createElement('div');
-        card.classList.add('col-lg-4', 'mb-4');
-        card.innerHTML = `
-            <div class="card">
-                <img src="${vehicle.image}" class="card-img-top" alt="${vehicle.name}">
-                <div class="card-body">
-                    <h5 class="card-title">${vehicle.name}</h5>
-                    <p class="card-text">${vehicle.description}</p>
-                    <button class="btn btn-primary" data-link="${vehicle.link || '#'}">En savoir plus</button>
+        const card = `
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="${vehicle.image}" class="card-img-top" alt="${vehicle.name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${vehicle.name}</h5>
+                        <p class="card-text">${vehicle.description}</p>
+                        <button class="btn btn-primary" data-link="${vehicle.link}">En savoir plus</button>
+                    </div>
                 </div>
             </div>
         `;
-        vehicleContainer.appendChild(card);
+        document.getElementById('vehicles').insertAdjacentHTML('beforeend', card);
     });
 
     // Ajoutez un gestionnaire d'événements aux nouveaux boutons après avoir ajouté les nouvelles cartes
@@ -54,9 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             Swal.fire({
                 title: vehicleName,
+                text: vehicleDescription,
                 html: `${vehicleDescription}<br><a href="${vehicleLink}" target="_blank">En savoir plus</a>`,
+
                 icon: 'info',
-                confirmButtonText: 'OK'
+                confirmButtonText: 'OK',
             });
         }
     });
