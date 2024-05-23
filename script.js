@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Les données des nouvelles voitures
     const newVehicles = [
         // Liste des voitures avec leurs propriétés (nom, description, image et lien)
+
         {
             name: 'Ford Ranger',
             description: 'Description du Ford Ranger.',
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: 'Nissan Navara',
             description: 'Description du Nissan Navara.',
             image: 'https://images.caradisiac.com/logos-ref/modele/modele--nissan-navara-3/S7-modele--nissan-navara-3.jpg',
-            link: 'https://www.nissan.co.uk/vehicles/new-vehicles/np300-navara.html'
+            link: 'https://www.caradisiac.com/modele--nissan-navara-3/'
         },
         {
             name: 'Volkswagen Amarok',
@@ -50,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
             name: 'Chevrolet Colorado',
             description: 'Description du Chevrolet Colorado.',
             image: 'https://img.sm360.ca/images/article/groupe-dallaire/106587//2023-colorado-gal-ext-011667230712658.jpg',
-            link: 'https://www.chevrolet.com/trucks/colorado-small-truck'
+            link: 'https://www.chevrolet.com/trucks/colorado'
         },
         {
             name: 'Ford F-150',
@@ -71,130 +72,53 @@ document.addEventListener('DOMContentLoaded', function () {
             link: 'https://automobiles.honda.com/ridgeline'
         },
         {
-            name: 'Mitsubishi L200',
-            description: 'Description du Mitsubishi L200.',
-            image: 'https://sf2.autoplus.fr/wp-content/uploads/autoplus/2022/12/1-89.jpg',
-            link: 'Lien de la page pour le Mitsubishi L200'
-        },
-        {
-            name: 'Hymer Exsis-i 474',
-            description: 'Description du Hymer Exsis-i 474.',
-            image: 'https://www.campingcarlesite.com/wp-content/uploads/2022/05/2022-Integral-Hymer-Exsis-i-474-07.jpg',
-            link: 'https://www.campingcarlesite.com/essai-camping-car/54177-hymer-exsis-i-474-les-atouts-dun-integral-dans-un-petit-format-664-m'
-        },
-        {
-            name: 'Ford Transit 2T',
-            description: 'Description du Ford Transit 2T.',
-            image: 'https://www.vanlifemag.fr/wp-content/uploads/2022/06/dethleffs-590c-001-e1675940818135-768x432.jpg',
-            link: 'https://www.vanlifemag.fr/presentationessais/ford-transit/66425'
-        },
-        {
-            name: 'Ford Transit Custom Nugget',
-            description: 'Description du Ford Transit Custom Nugget.',
-            image: 'https://live.dealer-asset.co/images/fr4/product/file/TransitCustomNugget-638489450688005219.jpg?s=2000',
-            link: 'https://www.motor1.com/news/683268/2024-ford-transit-custom-nugget/'
-        },
-        {
-            name: 'Mercedes Sprinter',
-            description: 'Description du Mercedes Sprinter.',
-            image: 'https://images.squarespace-cdn.com/content/v1/57ef0117579fb34c2451c73b/1610141260192-BV2N87XMRPF2QEFH5EMY/Copy+of+Toops_Sprinter+144-26.jpg?format=1500w',
-            link: 'https://vanlifecustoms.com/chads144sprinter'
-        },
-        {
-            name: 'Volkswagen Transporter',
-            description: 'Description du Volkswagen Transporter.',
-            image: 'https://www.ecowagon.co.uk/wp-content/uploads/2020/04/Custom-VW-T6-Specialists-UK.jpg',
-            link: 'https://www.ecowagon.co.uk/custom-van-options/'
-        },
-        {
-            name: 'Fiat Ducato',
-            description: 'Description du Fiat Ducato.',
-            image: 'https://www.fiatcamper.com/content/dam/camper/cross/product/fiat-ducato-camper-van/modular-dimensions/cover-2.jpg',
-            link: 'https://www.fiatcamper.com/fr/produit/Fiat-ducato-camper-van'
-        },
-        {
-            name: 'Renault Master',
-            description: 'Description du Renault Master.',
-            image: 'https://www.vanlifemag.fr/wp-content/uploads/2023/07/font-vendome-leader-camp-elegance1.jpg',
-            link: 'https://www.vanlifemag.fr/presentationessais/font-vendome-nos-photos-exclusives-des-nouveaux-camper-vans-elegance/69261'
-        },
-        {
-            name: 'Peugeot Boxer',
-            description: 'Description du Peugeot Boxer.',
-            image: 'https://www.transitcenter.fr/graphics/new_brands/Boxerglowne.jpg',
-            link: 'https://www.transitcenter.fr/peugeot-boxer.php'
-        },
-        {
-            name: 'Citroën Jumper',
-            description: 'Description du Citroën Jumper.',
-            image: 'https://i.gaw.to/vehicles/photos/40/24/402483_2020_citroen_jumper.jpg',
-            link: 'https://www.citroen.fr/vehicules-utilitaires/citroen-jumper.html'
-        },
-        {
-            name: 'Nissan NV300',
-            description: 'Description du Nissan NV300.',
-            image: 'https://assets.quirkycampers.com/uk/wp-content/uploads/2022/04/20220416_142859-1-1024x768.jpg',
-            link: 'https://www.quirkycampers.com/uk/for-sale/converted-nissan-nv300/'
-        },
-        {
-            name: 'Iveco Daily',
-            description: 'Description du Iveco Daily.',
-            image: 'https://cdn.motor1.com/images/mgl/jXk3W/s3/iveco-daily-2022.jpg',
-            link: 'https://www.iveco.com/ivecobus/products/pages/new-daily-van.aspx'
-        },
-        {
-            name: 'Ford Transit Custom',
-            description: 'Description du Ford Transit Custom.',
-            image: 'https://www.ford.co.uk/content/dam/guxeu/uk/showroom/vehicles/transit-custom/commercial/ford_transit_custom_gallery_04.jpg',
-            link: 'https://www.ford.co.uk/vans-and-pickups/transit-custom/'
-        },
-        {
-            name: 'Ford E-Transit',
-            description: 'Description du Ford E-Transit.',
-            image: 'https://media.ford.com/content/fordmedia/fna/us/en/news/2020/11/12/all-electric-ford-e-transit-to-power-a-new-era-of-business.html',
-            link: 'https://www.ford.com/commercial-trucks/e-transit/'
-        },
-        {
-            name: 'Ford Tourneo Custom',
-            description: 'Description du Ford Tourneo Custom.',
-            image: 'https://www.ford.co.uk/content/dam/guxeu/uk/showroom/vehicles/tourneo-custom/commercial/ford_tourneo_custom_gallery_03.jpg',
-            link: 'https://www.ford.co.uk/cars/tourneo-custom/'
-        },
-        {
-            name: 'Ford Nugget',
-            description: 'Description du Ford Nugget.',
-            image: 'https://www.ford.co.uk/content/dam/guxeu/uk/showroom/vehicles/nugget/commercial/ford_nugget_gallery_01.jpg',
-            link: 'https://www.ford.co.uk/vans-and-pickups/transit-custom/nugget/'
-        },
-        {
-            name: 'Ford Big Nugget',
-            description: 'Description du Ford Big Nugget.',
-            image: 'https://www.ford.co.uk/content/dam/guxeu/uk/showroom/vehicles/big-nugget/commercial/ford_big_nugget_gallery_01.jpg',
-            link: 'https://www.ford.co.uk/vans-and-pickups/transit-custom/big-nugget/'
-        },
-        {
-            name: 'Ford Transit Trail',
-            description: 'Description du Ford Transit Trail.',
-            image: 'https://www.ford.co.uk/content/dam/guxeu/uk/showroom/vehicles/transit-trail/commercial/ford_transit_trail_gallery_02.jpg',
-            link: 'https://www.ford.co.uk/vans-and-pickups/transit-trail/'
-        },
-        {
-            name: 'Ford Transit Courier',
-            description: 'Description du Ford Transit Courier.',
-            image: 'https://www.ford.co.uk/content/dam/guxeu/uk/showroom/vehicles/transit-courier/commercial/ford_transit_courier_gallery_02.jpg',
-            link: 'https://www.ford.co.uk/vans-and-pickups/transit-courier/'
-        },
-        {
             name: 'Ford Econoline (E-Series)',
             description: 'Description du Ford Econoline (E-Series).',
             image: 'https://www.contravans.com/wp-content/uploads/2023/10/IMG_E3484-1536x1152.jpg',
             link: 'https://www.contravans.com/ford-econoline-campervan-custom/'
         },
         {
-            name: 'Ford Club Wagon',
-            description: 'Description du Ford Club Wagon.',
-            image: 'https://media.ford.com/content/fordmedia/fna/us/en/news/2020/11/12/all-electric-ford-e-transit-to-power-a-new-era-of-business.html',
-            link: 'https://www.ford.com/commercial-trucks/e-transit/'
+            name: 'Mitsubishi L200',
+            description: 'Description du Mitsubishi L200.',
+            image: 'https://sf2.autoplus.fr/wp-content/uploads/autoplus/2022/12/1-89.jpg',
+            link: 'https://www.dna.fr/magazine-automobile/2023/10/16/pick-up-le-nouveau-mitsubishi-l200-deja-distingue'
+        },
+        {
+            name: 'Hymer Exsis-i 474', description: 'Description du Hymer Exsis-i 474.', image: 'https://www.campingcarlesite.com/wp-content/uploads/2022/05/2022-Integral-Hymer-Exsis-i-474-07.jpg', link: 'https://www.campingcarlesite.com/essai-camping-car/54177-hymer-exsis-i-474-les-atouts-dun-integral-dans-un-petit-format-664-m'
+        },
+        {
+            name: 'Ford Transit 2T', description: 'Description du Ford Transit 2T.', image: 'https://www.vanlifemag.fr/wp-content/uploads/2022/06/dethleffs-590c-001-e1675940818135-768x432.jpg', link: 'https://www.vanlifemag.fr/presentationessais/ford-transit/66425'
+        },
+        {
+            name: 'Ford Transit Custom Nugget', description: 'Description du Ford Transit Custom Nugget.', image: 'https://live.dealer-asset.co/images/fr4/product/file/TransitCustomNugget-638489450688005219.jpg?s=2000', link: 'https://www.motor1.com/news/683268/2024-ford-transit-custom-nugget/'
+        },
+        {
+            name: 'Mercedes Sprinter', description: 'Description du Mercedes Sprinter.', image: 'https://images.squarespace-cdn.com/content/v1/57ef0117579fb34c2451c73b/1610141260192-BV2N87XMRPF2QEFH5EMY/Copy+of+Toops_Sprinter+144-26.jpg?format=1500w', link: 'https://vanlifecustoms.com/chads144sprinter'
+        },
+        {
+            name: 'Volkswagen Transporter', description: 'Description du Volkswagen Transporter.', image: 'https://www.ecowagon.co.uk/wp-content/uploads/2020/04/Custom-VW-T6-Specialists-UK.jpg', link: 'https://www.ecowagon.co.uk/custom-van-options/'
+        },
+        {
+            name: 'Fiat Ducato', description: 'Description du Fiat Ducato.', image: 'https://www.fiatcamper.com/content/dam/camper/cross/product/fiat-ducato-camper-van/modular-dimensions/cover-2.jpg', link: 'https://www.fiatcamper.com/fr/produit/Fiat-ducato-camper-van'
+        },
+        {
+            name: 'Renault Master', description: 'Description du Renault Master.', image: 'https://www.vanlifemag.fr/wp-content/uploads/2023/07/font-vendome-leader-camp-elegance1.jpg', link: 'https://www.vanlifemag.fr/presentationessais/font-vendome-nos-photos-exclusives-des-nouveaux-camper-vans-elegance/69261'
+        },
+        {
+            name: 'Peugeot Boxer', description: 'Description du Peugeot Boxer.', image: 'https://www.transitcenter.fr/graphics/new_brands/Boxerglowne.jpg', link: 'https://www.transitcenter.fr/peugeot-boxer.php'
+        },
+
+        {
+            name: 'Nissan NV300',
+            description: 'Description du Nissan NV300',
+            image: 'https://assets.quirkycampers.com/uk/wp-content/uploads/2022/04/20220416_142859-1-1024x768.jpg',
+            link: 'https://www.quirkycampers.com/uk/for-sale/converted-nissan-nv300/'
+        },
+        {
+            name: 'Ford Econoline',
+            description: 'Description du Nissan NV300 Ford Ecoline',
+            image: 'https://www.contravans.com/wp-content/uploads/2023/10/IMG_E3484-1536x1152.jpg',
+            link: 'https://www.contravans.com/ford-econoline-campervan-custom/'
         }
     ];
 
