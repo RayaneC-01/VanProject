@@ -19,7 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Chevrolet Colorado', description: 'Description du Chevrolet Colorado.', image: 'https://img.sm360.ca/images/article/groupe-dallaire/106587//2023-colorado-gal-ext-011667230712658.jpg' },
         { name: 'Ford F-150', description: 'Description du Ford F-150.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMoCeaM4_fm4LSMptwstILyMdGkNxGULJYXXlcxmHN8A&s' },
         { name: 'Jeep Gladiator', description: 'Description du Jeep Gladiator.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0J2BSUw1--u3WYTFvnFoTeBBBBn5RYzT36_puMv1bnA&s' },
-        { name: 'Honda Ridgeline', description: 'Description du Honda Ridgeline.', image: 'https://hips.hearstapps.com/hmg-prod/images/2024-honda-ridgeline-trailsport-117-660c4ee75bd07.jpg?crop=0.901xw:0.674xh;0.0537xw,0.243xh&resize=1200:*' }
+        { name: 'Honda Ridgeline', description: 'Description du Honda Ridgeline.', image: 'https://hips.hearstapps.com/hmg-prod/images/2024-honda-ridgeline-trailsport-117-660c4ee75bd07.jpg?crop=0.901xw:0.674xh;0.0537xw,0.243xh&resize=1200:*' },
+        { name: 'Hymer Exsis-i 474', description: 'Description du Hymer Exsis-i 474.', image: 'https://www.campingcarlesite.com/wp-content/uploads/2022/05/2022-Integral-Hymer-Exsis-i-474-07.jpg', link: 'https://www.campingcarlesite.com/essai-camping-car/54177-hymer-exsis-i-474-les-atouts-dun-integral-dans-un-petit-format-664-m' },
+        { name: 'Ford Transit 2T', description: 'Description du Ford Transit 2T.', image: 'https://www.vanlifemag.fr/wp-content/uploads/2022/06/dethleffs-590c-001-e1675940818135-768x432.jpg', link: 'https://www.vanlifemag.fr/presentationessais/ford-transit/66425' },
+        { name: 'Ford Transit Custom Nugget', description: 'Description du Ford Transit Custom Nugget.', image: 'https://live.dealer-asset.co/images/fr4/product/file/TransitCustomNugget-638489450688005219.jpg?s=2000' },
+        { name: 'Mercedes Sprinter', description: 'Description du Mercedes Sprinter.', image: 'https://images.squarespace-cdn.com/content/v1/57ef0117579fb34c2451c73b/1610141260192-BV2N87XMRPF2QEFH5EMY/Copy+of+Toops_Sprinter+144-26.jpg?format=1500w' },
     ];
 
     // affiche dans la fenetre
@@ -41,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
         `;
-        vehicleContainer.innerHTML += card;
+        document.getElementById('vehicles').appendChild(card);
     });
 
     // Ajoutez un gestionnaire d'événements aux nouveaux boutons après avoir ajouté les nouvelles cartes
