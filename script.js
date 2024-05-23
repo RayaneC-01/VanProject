@@ -1,16 +1,22 @@
-/* jshint esversion: 6 */
-
+// Attend que le DOM soit chargé avant d'exécuter le code
 document.addEventListener('DOMContentLoaded', function () {
-    const vehicleContainer = document.getElementById('vehicles'); // Correction ici
 
+    // Sélectionne l'élément avec l'ID "vehicles" dans le DOM
+    const vehicleContainer = document.getElementById('vehicles');
+
+    // Vérifie si l'élément vehicleContainer existe
     if (!vehicleContainer) {
-        console.error('Element with ID "vehicles" not found'); // Correction ici
+        // Affiche un message d'erreur dans la console si l'élément n'est pas trouvé
+        console.error('Element with ID "vehicles" not found');
+        // Sort de la fonction si l'élément n'est pas trouvé
         return;
     }
 
 
     // Les données des nouvelles voitures
     const newVehicles = [
+        // Liste des voitures avec leurs propriétés (nom, description, image et lien)
+
         {
             name: 'Ford Ranger',
             description: 'Description du Ford Ranger.',
