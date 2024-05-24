@@ -7,8 +7,7 @@ Ce projet présente une collection de véhicules avec leurs descriptions, images
 1. Clonez ce dépôt sur votre machine locale :
 
 ```bash
-git clone https://github.com/votre-utilisateur/vehicle-showcase.git
-cd vehicle-showcase
+git clone https://github.com/RayaneC-01/VanProject.git
 ```
 
 2. Ouvrez `index.html` dans votre navigateur web.
@@ -28,4 +27,5 @@ cd vehicle-showcase
 
 Les contributions sont les bienvenues! Si vous avez des suggestions ou des améliorations, veuillez ouvrir une issue ou soumettre une pull request.
 
-## Licence
+## Auteur
+[Rayane](https://github.com/RayaneC-01)
