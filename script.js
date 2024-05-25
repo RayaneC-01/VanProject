@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
-
     // Les données des nouvelles voitures
     const newVehicles = [
         // Liste des voitures avec leurs propriétés (nom, description, image et lien)
@@ -170,5 +169,4 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
-
 });
