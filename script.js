@@ -121,6 +121,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ];
 
+    const successMessage = document.querySelector('.alert-success');
+    if (successMessage) {
+        setTimeout(() => {
+            successMessage.style.display = 'none';
+        }, 5000);
+    }
+
+    const errorMessage = document.querySelector('.alert-danger');
+    if (errorMessage) {
+        setTimeout(() => {
+            errorMessage.style.display = 'none';
+        }, 5000);
+    }
+
     // Pour chaque nouvelle voiture, créez une carte et ajoute  au conteneur
     // Début de la boucle forEach qui itère sur chaque objet véhicule dans le tableau newVehicles
     newVehicles.forEach(vehicle => {
