@@ -1,12 +1,19 @@
-# Showcase de Véhicules
+# Présentation des Véhicules
 
 Ce projet présente une collection de véhicules avec leurs descriptions, images et liens pour plus de détails. Les utilisateurs peuvent cliquer sur un bouton pour obtenir des informations supplémentaires sur chaque véhicule via une boîte de dialogue modale.
+
+## Table des Matières
+
+- [Installation](#Installation)
+- [Utilisation](#Utilisation)
+- [Structure des Fichiers](#structure-des-fichiers)
+- [Technologies Utilisées](#technologies-utilisées)
 
 ## Installation
 
 1. Clonez ce dépôt sur votre machine locale :
 
-```bash
+```
 git clone https://github.com/RayaneC-01/VanProject.git
 ```
 
