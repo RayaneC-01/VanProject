@@ -18,7 +18,7 @@ session_start();
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="#">Présentation des Véhicules</a>
+        <a class="navbar-brand" href="../index.html">Présentation des Véhicules</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -26,13 +26,13 @@ session_start();
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Accueil</a>
+              <a class="nav-link" href="../index.html">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="vehicles.html">Véhicules</a>
+              <a class="nav-link" href="../HTML/vehicles.html">Véhicules</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.php">Contact</a>
+              <a class="nav-link" href="../PHP/contact.php">Contact</a>
             </li>
           </ul>
         </div>
@@ -57,7 +57,7 @@ session_start();
             </div>
             <?php unset($_SESSION['message_error']); ?>
           <?php endif; ?>
-          <form method="POST" action="contact_processing.php">
+          <form method="POST" action="../PHP/contact_processing.php">
             <div class="mb-3">
               <label for="name" class="form-label">Nom</label>
               <input type="text" name="nameForm" class="form-control" id="name" required />
