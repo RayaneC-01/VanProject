@@ -42,7 +42,7 @@ session_start();
 
     <main>
         <div class="container my-5">
-            <h1 class="text-center">Contactez-nous</h1>
+            <h1 class="text-center">Contactez-moi</h1>
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <?php if (isset($_SESSION['message_success'])): ?>
@@ -60,19 +60,19 @@ session_start();
                     <form method="POST" action="../PHP/contact_processing.php">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nom</label>
-                            <input type="text" name="nameForm" class="form-control" id="name" required />
+                            <input type="text" name="nameForm" class="form-control" id="name" />
                         </div>
                         <div class="mb-3">
                             <label for="first_name" class="form-label">Prénom</label>
-                            <input type="text" name="first_name" class="form-control" id="first_name" required />
+                            <input type="text" name="first_name" class="form-control" id="first_name" />
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" name="emailForm" class="form-control" id="email" required />
+                            <input type="email" name="emailForm" class="form-control" id="email" />
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" name="messageForm" id="message" rows="5" required></textarea>
+                            <textarea class="form-control" name="messageForm" id="message" rows="5"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Envoyer</button>
                     </form>
@@ -93,7 +93,8 @@ session_start();
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    <script src="../JS/script.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
 </body>
