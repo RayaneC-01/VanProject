@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'connection_db.php';
+include '../PHP/connection_db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validation et sécurisation des données
@@ -9,10 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = htmlentities(trim($_POST['emailForm']), ENT_QUOTES, 'UTF-8');
     $message = htmlentities(trim($_POST['messageForm']), ENT_QUOTES, 'UTF-8');
 
-    if (!empty($name) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($message)) {
+    if (!empty($name) && !empty($first_name) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($message)) {
         try {
             // Préparer la requête d'insertion
-            $query = "INSERT INTO messages (nom,first_name, email, message) VALUES (:name,:first_name, :email, :message)";
+            $query = "INSERT INTO messages (name, first_name, email, message) VALUES (:name, :first_name, :email, :message)";
             $stmt = $pdo->prepare($query);
 
             // Lier les paramètres
