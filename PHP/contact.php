@@ -63,6 +63,10 @@ session_start();
               <input type="text" name="nameForm" class="form-control" id="name" required />
             </div>
             <div class="mb-3">
+              <label for="name" class="form-label">Prénom</label>
+              <input type="text" name="first_name" class="form-control" id="first_name" required />
+            </div>
+            <div class="mb-3">
               <label for="email" class="form-label">Email</label>
               <input type="email" name="emailForm" class="form-control" id="email" required />
             </div>
