@@ -18,7 +18,8 @@ git clone https://github.com/RayaneC-01/VanProject.git
 ```
 
 2. Ouvrez `index.html` dans votre navigateur web.
-
+3. Pour ouvrir la page contact.php :
+- http://localhost/CampervanConversion/PHP/contact.php
 ## Utilisation
 
 - La page affiche une grille de véhicules avec leurs images et descriptions.
