@@ -1,5 +1,11 @@
+
 // Attend que le DOM soit chargé avant d'exécuter le code
 document.addEventListener('DOMContentLoaded', function () {
+
+    //vérifier dans le mail y'a "@" ou ".com"
+    let email_form = document.getElementById("email");
+    //console.log(email_form);
+    
 
     // Sélectionne l'élément avec l'ID "vehicles" dans le DOM
     const vehicleContainer = document.getElementById('vehicles');
@@ -139,16 +145,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Début de la boucle forEach qui itère sur chaque objet véhicule dans le tableau newVehicles
     newVehicles.forEach(vehicle => {
         const card = `
-            <div class="col-lg-4 mb-4">
-                <div class="card">
-                    <img src="${vehicle.image}" class="card-img-top" alt="${vehicle.name}">
-                    <div class="card-body">
-                        <h5 class="card-title">${vehicle.name}</h5>
-                        <p class="card-text">${vehicle.description}</p>
-                        <button class="btn btn-primary" data-link="${vehicle.link}">En savoir plus</button>
-                    </div>
-                </div>
-            </div>
+        <div class="col-lg-4 mb-4">
+        <div class="card">
+        <img src="${vehicle.image}" class="card-img-top" alt="${vehicle.name}">
+        <div class="card-body">
+        <h5 class="card-title">${vehicle.name}</h5>
+        <p class="card-text">${vehicle.description}</p>
+        <button class="btn btn-primary" data-link="${vehicle.link}">En savoir plus</button>
+        </div>
+        </div>
+        </div>
         `;
         // Insère la carte nouvellement créée dans le conteneur "vehicles" dans le DOM
         document.getElementById('vehicles').insertAdjacentHTML('beforeend', card);
@@ -183,4 +189,5 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
+
 });
