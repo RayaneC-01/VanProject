@@ -2,14 +2,14 @@
 // Attend que le DOM soit chargé avant d'exécuter le code
 document.addEventListener('DOMContentLoaded', function () {
 
-    //vérifier dans le mail contient "@" ou se termine".com"
-    let email_form = document.getElementById("email").value;
-    //console.log(email_form);
-    if (email_form.indexOf("@") === -1 || !email_form.endsWith(".com")) {
-        alert("L'adresse e-mail doit contenir @ et se terminer par .com .");
-        event.preventDefault();
-        return;
-    }
+    // //vérifier dans le mail contient "@" ou se termine".com"
+    // let email_form = document.getElementById("email").value;
+    // //console.log(email_form);
+    // if (email_form.indexOf("@") === -1 || !email_form.endsWith(".com")) {
+    //     alert("L'adresse e-mail doit contenir @ et se terminer par .com .");
+    //     event.preventDefault();
+    //     return;
+    // }
 
     // Sélectionne l'élément avec l'ID "vehicles" dans le DOM
     const vehicleContainer = document.getElementById('vehicles');
