@@ -55,6 +55,20 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             type: 'pickup',
+            name: 'GMC Sierra 1500',
+            description: 'Description du GMC Sierra 1500.',
+            image: 'https://www.gmccanada.ca/content/dam/gmc/na/ca/en/index/trucks/01-images/2023-sierra-1500-lg-23PGSRLD00095.jpg?imwidth=1200',
+            link: 'https://www.gmccanada.ca/fr/trucks'
+        },
+        {
+            type: 'pickup',
+            name: 'GMC Canyon AT4X',
+            description: 'Description du  Canyon AT4X.',
+            image: 'https://www.gmccanada.ca/content/dam/gmc/na/ca/en/index/trucks/2024-canyon/featured-edition/2024-canyon-overview-at4x-aev-edition-1920x1200-24PGCN00419.jpg?imwidth=600',
+            link: 'https://www.gmccanada.ca/fr/trucks/canyon'
+        },
+        {
+            type: 'pickup',
             name: 'Mercedes-Benz X-Class',
             description: 'Description du Mercedes-Benz X-Class.',
             image: 'https://images.clickdealer.co.uk/vehicles/5254/5254336/large1/124197960.jpg',
@@ -167,6 +181,10 @@ document.addEventListener('DOMContentLoaded', function () {
             link: 'https://www.caradisiac.com/chevrolet-explique-en-video-pourquoi-roder-la-corvette-z06-200063.htm'
         }
     ];
+
+    //Filtrage pour le button
+    const filterButton = document.getElementById('filterButton');
+    const vehicleTypeSelect = document.getElementById('vehicleType');
 
     const successMessage = document.querySelector('.alert-success');
     if (successMessage) {
