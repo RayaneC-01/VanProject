@@ -177,14 +177,10 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'sport',
             name: 'Chevrolet corvette Z06 ',
             description: 'Description de la Corvette Z06',
-            image: 'https://images.caradisiac.com/images/0/0/6/3/200063/S0-chevrolet-explique-en-video-comment-roder-la-corvette-z06-740960 jpg',
+            image: 'https://images.caradisiac.com/images/0/0/6/3/200063/S1-chevrolet-explique-en-video-comment-roder-la-corvette-z06-740960.jpg',
             link: 'https://www.caradisiac.com/chevrolet-explique-en-video-pourquoi-roder-la-corvette-z06-200063.htm'
         }
     ];
-
-    //Filtrage pour le button
-    const filterButton = document.getElementById('filterButton');
-    const vehicleTypeSelect = document.getElementById('vehicleType');
 
     const successMessage = document.querySelector('.alert-success');
     if (successMessage) {
