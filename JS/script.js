@@ -199,54 +199,60 @@ document.addEventListener('DOMContentLoaded', function () {
             errorMessage.style.display = 'none';
         }, 5000);
     }
-
-    // Pour chaque nouvelle voiture, créez une carte et ajoute  au conteneur
-    // Début de la boucle forEach qui itère sur chaque objet véhicule dans le tableau newVehicles
-    newVehicles.forEach(vehicle => {
-        const card = `
+    // Fonction pour afficher les véhicules filtrés
+    function displayVehicles(vehicles) {
+        vehicleContainer.innerHTML = ''; // Efface le conteneur des véhicules
+        vehicles.forEach(vehicle => {
+            const card = `
         <div class="col-lg-4 mb-4">
-        <div class="card">
-        <img src="${vehicle.image}" class="card-img-top" alt="${vehicle.name}">
-        <div class="card-body">
-        <h5 class="card-title">${vehicle.name}</h5>
-        <p class="card-text">${vehicle.description}</p>
-        <button class="btn btn-primary" data-link="${vehicle.link}">En savoir plus</button>
-        </div>
-        </div>
+            <div class="card">
+                <img src="${vehicle.image}" class="card-img-top" alt="${vehicle.name}">
+                <div class="card-body">
+                    <h5 class="card-title">${vehicle.name}</h5>
+                    <p class="card-text">${vehicle.description}</p>
+                    <button class="btn btn-primary" data-link="${vehicle.link}">En savoir plus</button>
+                </div>
+            </div>
         </div>
         `;
-        // Insère la carte nouvellement créée dans le conteneur "vehicles" dans le DOM
-        document.getElementById('vehicles').insertAdjacentHTML('beforeend', card);
-        // Utilise insertAdjacentHTML pour insérer la carte HTML à la fin du contenu existant du conteneur "vehicles"
+            vehicleContainer.insertAdjacentHTML('beforeend', card);
+        });
+    }
 
-    }); // Fin de la boucle forEach
+    // Affiche tous les véhicules au chargement de la page
+    displayVehicles(newVehicles);
+
+    // Gestionnaire d'événements pour le bouton de filtrage
+    document.getElementById('filterButton').addEventListener('click', function () {
+        const selectedType = document.getElementById('vehicleType').value;
+        let filteredVehicles;
+        if (selectedType === 'all') {
+            filteredVehicles = newVehicles; // Affiche tous les véhicules si "Tous les types" est sélectionné
+        } else {
+            filteredVehicles = newVehicles.filter(vehicle => vehicle.type === selectedType); // Filtre les véhicules par type
+        }
+        displayVehicles(filteredVehicles); // Met à jour l'affichage des véhicules
+    });
 
     // Ajoutez un gestionnaire d'événements aux nouveaux boutons après avoir ajouté les nouvelles cartes
     vehicleContainer.addEventListener('click', function (e) {
         // Début de l'écouteur d'événements 'click' sur le conteneur de véhicules
-
         if (e.target && e.target.classList.contains('btn')) {
             // Vérifie si l'élément cliqué est un bouton
-
             // Récupère le nom du véhicule à partir du titre de la carte parente de ce bouton
             let vehicleName = e.target.parentNode.querySelector('.card-title').innerText;
-
             // Récupère la description du véhicule à partir du texte de la carte parente de ce bouton
             let vehicleDescription = e.target.parentNode.querySelector('.card-text').innerText;
-
             // Récupère le lien du véhicule à partir de l'attribut data-link du bouton
             let vehicleLink = e.target.getAttribute('data-link');
-
             // Affiche une boîte de dialogue modale avec le nom, la description et un lien pour en savoir plus sur le véhicule
             Swal.fire({
                 title: vehicleName, // Titre de la boîte de dialogue avec le nom du véhicule
                 text: vehicleDescription, // Texte de la boîte de dialogue avec la description du véhicule
                 html: `${vehicleDescription}<br><a href="${vehicleLink}" target="_blank">En savoir plus</a>`, // Contenu HTML de la boîte de dialogue avec la description et le lien du véhicule
-
                 icon: 'info', // Icône de la boîte de dialogue (info)
                 confirmButtonText: 'OK', // Texte du bouton de confirmation
             });
         }
     });
-
 });
