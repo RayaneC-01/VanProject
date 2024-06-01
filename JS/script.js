@@ -104,6 +104,20 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             type: 'pickup',
+            name: '2024 Chevrolet Tahoe',
+            description: 'Description du Chevrolet Tahoe .',
+            image: 'https://www.motortrend.com/uploads/2023/12/023-2024-Chevrolet-Tahoe-Z71-front-view.jpg?fit=around%7C875:492',
+            link: 'https://www.motortrend.com/cars/chevrolet/tahoe/2024/photos/'
+        },
+        {
+            type: 'pickup',
+            name: '2024 Jeep Grand Cherokee',
+            description: 'Description du Chevrolet Tahoe .',
+            image: 'https://www.jeep.com/content/dam/fca-brands/na/jeep/en_us/2023/grand-cherokee/vlp/desktop/my24-jeep-grand-cherokee-vlp-hero-awards-v2-desktop.jpg',
+            link: 'https://www.jeep.com/grand-cherokee.html'
+        },
+        {
+            type: 'pickup',
             name: 'Ford Econoline (E-Series)',
             description: 'Description du Ford Econoline (E-Series).',
             image: 'https://www.contravans.com/wp-content/uploads/2023/10/IMG_E3484-1536x1152.jpg',
