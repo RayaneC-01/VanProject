@@ -105,16 +105,23 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             type: 'pickup',
             name: '2024 Chevrolet Tahoe',
-            description: 'Description du Chevrolet Tahoe .',
+            description: 'Description du Chevrolet Tahoe.',
             image: 'https://www.motortrend.com/uploads/2023/12/023-2024-Chevrolet-Tahoe-Z71-front-view.jpg?fit=around%7C875:492',
             link: 'https://www.motortrend.com/cars/chevrolet/tahoe/2024/photos/'
         },
         {
             type: 'pickup',
             name: '2024 Jeep Grand Cherokee',
-            description: 'Description du Chevrolet Tahoe .',
+            description: 'Description du Chevrolet Tahoe.',
             image: 'https://www.jeep.com/content/dam/fca-brands/na/jeep/en_us/2023/grand-cherokee/vlp/desktop/my24-jeep-grand-cherokee-vlp-hero-awards-v2-desktop.jpg',
             link: 'https://www.jeep.com/grand-cherokee.html'
+        },
+        {
+            type: 'pickup',
+            name: '2024 Toyota Tacoma',
+            description: 'Description du Toyota Tacoma.',
+            image: 'https://media.ed.edmunds-media.com/toyota/tacoma/2024/oem/2024_toyota_tacoma_crew-cab-pickup_limited_fq_oem_4_815x543.jpg',
+            link: 'https://www.edmunds.com/toyota/tacoma/'
         },
         {
             type: 'pickup',
