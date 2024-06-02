@@ -274,21 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Add an event listener to the window object that calls the scrollFunc function whenever the user scrolls
-    window.addEventListener("scroll", scrollFunc);
-
-    // Define a function that scrolls the page to the top
-    const scrollToTop = () => {
-        // Get the current scroll position
-        const c = document.documentElement.scrollTop || document.body.scrollTop;
-
-        // If the scroll position is greater than 0, scroll the page to the top
-        if (c > 0) {
-            window.scrollTo(0, 0);
-        }
-    };
-
-    // Add an event listener to the "back to top" button that calls the scrollToTop function whenever the button is clicked
-    scrollToTopButton.addEventListener("click", scrollToTop);
+    window.addEventListener("scroll", scrollFunction);
 });
 
 // Fonction qui est appelée lorsque l'utilisateur fait défiler la page
